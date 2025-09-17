@@ -1,0 +1,128 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% If you would like to have locale-specific hyphenation and typographical rules
+% for the language in which your CV is written, change the set language
+\usepackage[french]{babel}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo{./profile.png}
+\name{Edouard}{Brülhart}
+\address{Route de la Scie-au-Crot 50, 1747 Corserey, Fribourg, Suisse}
+
+\mobile{+41 79 290 71 19}
+\email{edouard.brulhart@gmail.com}
+\dateofbirth{26 mars 1998}
+%\homepage{www.posquit0.com}
+\github{edouardbruelhart}
+\linkedin{edouardbrulhart}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \x{x-id}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{medium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \telegram{telegram-username}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+\quote{Efficace~~~·~~~Persévérant~~~·~~~Curieux~~~·~~~Déterminé~~~·~~~Consciencieux}
+\position{Scientifique des données}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Edouard Brülhart~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{fr/skills.tex}
+\input{fr/experience.tex}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/education.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/extracurricular.tex}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/softwares.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/languages.tex}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/programming.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{fr/interests.tex}
+\end{minipage}
+
+%-------------------------------------------------------------------------------
+\end{document}

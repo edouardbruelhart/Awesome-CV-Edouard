@@ -44,23 +44,25 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+% If you would like to have locale-specific hyphenation and typographical rules
+% for the language in which your CV is written, change the set language
+\usepackage[german]{babel}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Claud D.}{Park}
-\position{Site Reliability Engineer{\enskip\cdotp\enskip}Software Architect}
-\address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+\photo{./profile.png}
+\name{Edouard}{Brülhart}
+\address{Route de la Scie-au-Crot 50, 1747 Corserey, Fribourg, Schweiz}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-%\dateofbirth{January 1st, 1970}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+\mobile{+41 79 290 71 19}
+\email{edouard.brulhart@gmail.com}
+\dateofbirth{26. März 1998}
+%\homepage{www.posquit0.com}
+\github{edouardbruelhart}
+\linkedin{edouardbrulhart}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -76,8 +78,8 @@
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
-\quote{``Be the change that you want to see in the world."}
-
+\quote{Effizient~~~·~~~Ausdauernd~~~·~~~Neugierig~~~·~~~Entschlossen~~~·~~~Gewissenhaft}
+\position{Datenwissenschaftler}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -90,7 +92,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {Edouard Brülhart~~~·~~~Curriculum Vitae}
   {\thepage}
 
 
@@ -98,16 +100,29 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/certificates.tex}
-\input{cv/presentation.tex}
-\input{cv/writing.tex}
-\input{cv/committees.tex}
+\input{de/skills.tex}
+\input{de/experience.tex}
 
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/education.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/extracurricular.tex}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/softwares.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/languages.tex}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/programming.tex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \input{de/interests.tex}
+\end{minipage}
 
 %-------------------------------------------------------------------------------
 \end{document}
