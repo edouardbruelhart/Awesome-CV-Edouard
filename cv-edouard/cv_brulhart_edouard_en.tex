@@ -48,6 +48,8 @@
 % for the language in which your CV is written, change the set language
 \usepackage[english]{babel}
 
+\usepackage{paracol}
+
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
@@ -57,7 +59,7 @@
 \name{Edouard}{Brülhart}
 \address{Route de la Scie-au-Crot 50, 1747 Corserey, Fribourg, Switzerland}
 
-\mobile{+41 79 290 71 19}
+\mobile{079 290 71 19}
 \email{edouard.brulhart@gmail.com}
 \dateofbirth{March 26, 1998}
 %\homepage{www.posquit0.com}
@@ -104,23 +106,29 @@
 \input{en/experience.tex}
 
 \begin{minipage}[t]{0.48\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/education.tex}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/extracurricular.tex}
 \end{minipage}
 
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.60\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/softwares.tex}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.48\textwidth}
+\begin{minipage}[t]{0.36\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/languages.tex}
 \end{minipage}
 
 \begin{minipage}[t]{0.48\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/programming.tex}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\textwidth}
+  \setlength{\parskip}{\acvSectionContentTopSkip}
   \input{en/interests.tex}
 \end{minipage}
 

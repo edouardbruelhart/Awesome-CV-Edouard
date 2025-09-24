@@ -96,6 +96,8 @@
 }
 % Solves issues Warning: File `cv.out' has changed
 \RequirePackage{bookmark}
+% Avoid hyphenation. Comment this line if you want to allow hyphenation.
+\RequirePackage[none]{hyphenat}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -223,6 +225,12 @@
 \newcommand*{\letternamestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\letterenclosurestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{lighttext} #1}}
 
+% Software level command:  \level{n} prints n red stars (*)
+\newcommand{\level}[1]{%
+  {\color{red}\ifnum#1>0 *\fi
+              \ifnum#1>1 *\fi
+              \ifnum#1>2 *\fi}%
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for personal information
@@ -654,10 +662,9 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \vspace{\acvSectionTopSkip}
-  \sectionstyle{#1}
+  \sectionstyle{#1}%
   \phantomsection
-  \color{sectiondivider}\vhrulefill{0.9pt}
+  \color{sectiondivider}\vhrulefill{0.9pt}%
 }
 
 % Define a subsection for CV
