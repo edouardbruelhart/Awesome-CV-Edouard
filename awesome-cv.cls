@@ -227,7 +227,7 @@
 
 % Software level command:  \level{n} prints n red stars (*)
 \newcommand{\level}[1]{%
-  {\color{red}\ifnum#1>0 *\fi
+  {\color{teal}\ifnum#1>0 *\fi
               \ifnum#1>1 *\fi
               \ifnum#1>2 *\fi}%
 }
@@ -693,8 +693,9 @@
 }{%
   \end{center}
 }
+
 % Define an entry of cv information
-% Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+% Usage: \cventry{<institution/company>}{<position>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
@@ -707,6 +708,24 @@
     \ifstrempty{#5}
       {}
       {\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}} \\}
+  \end{tabular*}%
+}
+
+% Define an entry of cv information without location
+% Usage: \cventrynoloc{<institution/company>}{<position>}{<date>}{<description>}}
+\newcommand*{\cventrynoloc}[4]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    % First line: institution/company takes full width
+    \multicolumn{2}{L{\textwidth}}{\entrytitlestyle{#2}} \\[-1pt]
+    % Second line: position (left) and date (right)
+    \entrypositionstyle{#1} & \entrydatestyle{#3} \\
+    % Optional description
+    \ifstrempty{#4}
+      {}
+      {\multicolumn{2}{L{\textwidth}}{\descriptionstyle{#4}} \\}
   \end{tabular*}%
 }
 
